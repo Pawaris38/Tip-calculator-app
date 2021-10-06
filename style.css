@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+:root{
+    --Strongcyan: hsl(172, 67%, 45%);
+    --Verydarkcyan: hsl(183, 100%, 15%);
+    --Darkgrayishcyan: hsl(186, 14%, 43%);
+    --Darkgrayishcyan: hsl(184, 14%, 56%);
+    --Lightgrayishcyan: hsl(185, 41%, 84%);
+    --Lightgrayishcyan2: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--Lightgrayishcyan);
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    width: 1440px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.logo{
+    margin-bottom: 30px;
+}
+.container.section{
+    margin: auto auto;
+}
+.section{
+    background-color: var(--White);
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    border-radius: 15px;
+}
+.card1{
+    background-color: var(--White);
+    margin: 30px; 
+    width: 100%;
+    position: relative;
+}
+.card1 p{
+    margin: 0;
+}
+.card1name span{
+   margin-left: 30px;
+   position: absolute;
+    left: 5px;
+    top: 42px;
+}
+.card1name input{
+    height: 40px;
+    border: none;
+    font-size: 24px;
+    color:var(--Darkgrayishcyan);
+    font-family: 'Space Mono', monospace;
+    margin-bottom: 20px;
+}
+.card1 input{
+    text-align: right;
+}
+.card1-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 15px;
+    background-color: var(--White);
+    padding: 10px;
+    margin-bottom: 35px;
+  }
+  .card1-grid  .item1,.item2,.item3,.item4,.item5 {
+    background-color: var(--Verydarkcyan);
+    text-align: center;
+    padding: 15px 0;
+    color: var(--White);
+    border-radius: 10px;
+    cursor: pointer;
+    width: 120px;
+  }
+  .card1-grid  .item1:hover,.item2:hover,.item3:hover,.item4:hover,.item5:hover {
+    background-color: var(--Strongcyan);
+    color: var(--Verydarkcyan);
+  }
+   .item3.active{
+    background-color: var(--Strongcyan);
+    color: var(--Verydarkcyan);
+  }
+  .card1-grid a{
+      text-decoration: none;
+      color: var(--White);
+     
+  }
+  .item6{
+    background-color: white;
+    text-align: center;
+    color:var(--Verydarkcyan);
+    font-weight: bold;
+    width: 120px;
+  }
+  .item6 input{
+    border: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    color:var(--Darkgrayishcyan);
+    font-weight: bold;
+    width: 100%;
+    height: 66px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .item6 input:focus{
+      outline: none;
+      border: 3px groove var(--Strongcyan);
+  }
+  .number{
+    position: relative;
+}
+.small{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    visibility: hidden;
+}
+.small.active{
+    color: red;
+    visibility: visible;
+}
+.custom.active{
+    text-align: right;
+    color: var(--Verydarkcyan);
+}
+.number input{
+    height: 40px;
+    border: none;
+    font-size: 24px;
+    color:var(--Darkgrayishcyan);
+    font-family: 'Space Mono', monospace;
+}
+.number span{
+    margin-left: 30px;
+   position: absolute;
+    left: 5px;
+    top: 42px;
+}
+.card2{
+    background-color: var(--Verydarkcyan);
+    margin: 30px;
+    border-radius: 15px;
+    width: 100%;
+}
+.card2-tip{
+    margin: 30px 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.card2-tip p {
+    color: var(--White);
+}
+.card2-tip small{
+    color:var(--Darkgrayishcyan);
+}
+.card2-tip h1{
+    color:var(--Strongcyan);
+}
+
+.card2-total{
+    margin: 0 30px 30px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.card2-total p{
+    color: var(--White);
+}
+.card2-total small{
+    color:var(--Darkgrayishcyan);
+}
+.card2-total h1{
+    color:var(--Strongcyan);
+}
+.card1name input:focus{
+    border: 2px groove var(--Strongcyan);
+    outline: none;
+    border-radius: 5px;
+   color: var(--Verydarkcyan);
+}
+.number input:focus{
+    border: 2px groove var(--Strongcyan);
+    outline: none;
+    border-radius: 5px;
+}
+.btn{
+   width: 300px;
+   height: 40px;
+   margin: 0 70px;
+   border-radius: 5px;
+   border: none;
+   color: var(--Verydarkcyan);
+   font-weight: 700;
+   font-size: 24px;
+   background-color: var(--Strongcyan);
+   font-family: 'Space Mono', monospace;
+   cursor: pointer;
+}
+.btn:hover{
+    background-color:var(--Lightgrayishcyan);
+}
+
+
+@media  (max-width:768px){
+    body{
+        max-width:375px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+        margin:0 60px;
+       
+      }
+    .container image{
+        margin-top: 30px;
+    }
+      .section{
+        display: flex;
+        flex-direction: column;
+          padding: 20px;
+          height: 800px;
+          width: 100%;
+          overflow: hidden;
+      }
+      .card1{
+          margin: 0;
+      }
+      .card1-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+        background-color: var(--White);
+        padding: 15px;
+        margin-bottom: 0;
+      }
+      .card1-grid  .item1,.item2,.item3,.item4,.item5 {
+        background-color: var(--Verydarkcyan);
+        text-align: center;
+        padding: 15px 0;
+        color: var(--White);
+        border-radius: 10px;
+        cursor: pointer;
+        width: 150px;
+      }
+      .item6 {
+          width: 150px;
+      }
+      .card2{
+          margin: 0;
+      }
+      .card2-tip{
+          margin: 0;
+          padding: 15px;
+          font-size: 15px;
+      }
+      .card2-total{
+          margin: 0;
+          padding: 15px;
+          font-size: 15px;
+      }
+     .btn{
+         width: 50%;
+     }
+     .number{
+         position: relative;
+     }
+     .number p{
+         padding: 5px;
+     }
+     .number input{
+         margin: 5px;
+     }
+     .number span{
+         position: absolute;
+         left: 5px;
+         top: 55px;
+     }
+     .small {
+         position: absolute;
+         top: 28px;
+         visibility: hidden;
+     }
+     .logo{
+         margin: 30px 0;
+     }
+     .btn{
+         margin-bottom: 20px;
+         margin-left: 80px;
+     }
+    }
